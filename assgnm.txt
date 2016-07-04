@@ -1,0 +1,62 @@
+				LOGIN SYSTEM
+
+A Login system has two parts:
+1)Sign up
+2)Log in
+
+
+Sign up has 3 fields namely:- 
+
+Username 
+
+Password
+
+Email
+
+A username is valid only if:
+size of username is between 3 and 32
+No special character is there
+
+Password is valid only if:
+size of password is between 8 and 32
+No capital letter ,small letter ,number or special character
+(for eg: Hello_123)
+
+Email is valid only if
+there are alpha-numeric present before and after @
+alpha-numeric@alpha-numeric
+
+
+
+Now an input is positive only if the above conditions are met.
+
+
+
+Sample set input for this system is
+[{deep,Hello_123,deep@gmail.com},{anuj,Awesome_123,anuj@ymail.com},{ajay,232132,ajay@hotmail.com},{nikhil,Great_123,nikgmail.com},{ami,Ami_1234,ami@gmail.com}]
+
+
+Sample set of output is
+[You Have Registered successfully, You Have Registered successfully,ERROR(due to password),ERROR(due to email),ERROR(due to username)]
+
+The positive input for this will the subset is:
+
+[{deep,Hello_123,deep@gmail.com},
+{anuj,Awesome_123,anuj@ymail.com}
+
+The negative input for this will be the subset which will yield an error is this:
+[{ajay,232132,ajay@hotmail.com},
+{nikhil,Great_123,nikgmail.com},
+{ami,Ami_1234,ami@gmail.com}]
+
+So the acceptance criteria will be as follows:
+
+When A is deep  and B is Hello_123 and C is deep@gmail.com the result is 1.
+When A is anuj  and B is Awesome_123 and C is anuj@ymail.com the result is 1.
+When A is ajay  and B is 232132 and C is ajay@hotmail.com the result is ERROR.
+When A is nikhil and B is Great_123 and C is nikgmail.com the result is ERROR.
+When A is ami  and B is Ami_1234 and C is ami@gmail.com the result is ERROR.
+
+
+
+
